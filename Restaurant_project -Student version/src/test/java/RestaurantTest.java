@@ -46,9 +46,9 @@ class RestaurantTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
-    public void select_menu_item_from_list_should_return_total_order_value(){
+    public void select_menu_item_from_list_should_return_total_order_value() throws restaurantNotFoundException{
         int totalOrderValue;
-        List<String> selectedMenuItems = Arrays.asList("Sweet Corn Soup","Vegetable Lasagne");
+        List<String> selectedMenuItems = Arrays.asList("Sweet corn soup","Vegetable lasagne");
         totalOrderValue = restaurant.calculateTotalOrderValue(selectedMenuItems) ;
     }
     //<<<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
