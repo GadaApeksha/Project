@@ -49,7 +49,7 @@ class RestaurantTest {
     public void select_menu_item_from_list_should_return_total_order_value(){
         int totalOrderValue;
         List<String> selectedMenuItems = Arrays.asList("Sweet Corn Soup","Vegetable Lasagne");
-        totalOrderValue = restaurant.select_menu_item_from_list_should_return_total_order_value(selectedMenuItems) ;
+        totalOrderValue = restaurant.calulateTotalOrderValue(selectedMenuItems) ;
     }
     //<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>
 
