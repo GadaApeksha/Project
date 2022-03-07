@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,19 +38,20 @@ class RestaurantTest {
         Restaurant spiedRestaurant = Mockito.spy(restaurant);
         Mockito.when(spiedRestaurant.getCurrentTime()).thenReturn(testTime);
         assertFalse(spiedRestaurant.isRestaurantOpen());
-
     }
 
-    //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED
+    //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-    //<<<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //<<<<<<<<<<<<<<<<<<<<<<<<<Calculate Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
-    public void select_menu_item_from_list_should_return_total_order_value() throws restaurantNotFoundException{
+    public void select_menu_item_from_list_should_return_total_order_value() {
+
         int totalOrderValue;
-        List<String> selectedMenuItems = Arrays.asList("Sweet corn soup","Vegetable lasagne");
+        List<Item> selectedMenuItems = restaurant.getMenu();
         totalOrderValue = restaurant.calculateTotalOrderValue(selectedMenuItems) ;
+        assertEquals(388,totalOrderValue);
     }
-    //<<<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //<<<<<<<<<<<<<<<<<<<<<<<<<Calculate Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
