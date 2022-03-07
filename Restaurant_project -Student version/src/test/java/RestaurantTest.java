@@ -42,18 +42,16 @@ class RestaurantTest {
 
     }
 
-    //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED
 
-       //>>>>>>>>>>>>>>>>>>>>>>Get Order Value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //<<<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
     public void select_menu_item_from_list_should_return_total_order_value(){
         int totalOrderValue;
         List<String> selectedMenuItems = Arrays.asList("Sweet Corn Soup","Vegetable Lasagne");
-        totalOrderValue = restaurant.calulateTotalOrderValue(selectedMenuItems) ;
+        totalOrderValue = restaurant.calculateTotalOrderValue(selectedMenuItems) ;
     }
-    //<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
+    //<<<<<<<<<<<<<<<<<<<<<<<<<Get Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
